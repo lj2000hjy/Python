@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # _*_ encoding:UTF-8 _*_
-
+# 何查看字符串有哪些内置方法： dir(str)
 #1、字符串概念
 #字符串："abcd1234" 或 'abcd1234'
 #子字符串："abc"
