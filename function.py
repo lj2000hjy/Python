@@ -3,14 +3,14 @@
 
 # 1,函数定义及其调用：
 #define function:add （函数说明）
-def add(x,y):   #函数头部，注意冒号，形参x,y
+def add(x, y):   #函数头部，注意冒号，形参x,y
     z=x+y       #函数体
     return z    #返回值
 #define main function
 def main():
     a=12
     b=13
-    c=add(a,b)   #函数调用，实参a,b
+    c=add(a, b)   #函数调用，实参a,b
     print c #=> 25
     
 main()           #无参函数调用
@@ -21,7 +21,7 @@ main()           #无参函数调用
 # 2，C的形参需要指定数据类型,而Python不需要。
 
 #Python的返回值允许有多个。
-def test(n1,n2):
+def test(n1, n2):
     print n1,
     print n2
     n=n1+n2
@@ -31,12 +31,12 @@ def test(n1,n2):
     return n,m,p,e
     
 print 'Entry programme1'
-sum,multi,plus,powl=test(2,10)   #一一对应的赋值方式
+sum,multi,plus,powl=test(2, 10)   #一一对应的赋值方式
 print 'sum=',sum
 print 'multi=',multi
 print 'plus=',plus
 print 'powl=',powl
-re=test(2,10)
+re=test(2, 10)
 print type(re) #=> <type 'tuple'>
 print re  #=> (12, 20, -8, 1024) 数据类型为：'tuple'
 print re[0],re[1],re[2],re[3]
@@ -81,8 +81,3 @@ print x #=> before modified global x= 200
 main()
 print 'after modified global x=',
 print x #=> after modified global x= -1
-
-
-
-
-

@@ -87,6 +87,10 @@ s1="my name is %s." % 'jacklau';
 print s1; #=> my name is jacklau.
 s2='my name is %s.' % 'jacklau';
 print s2; #=> my name is jacklau.
+s3="my name is {0}, my age is {1}".format('jacklau',23)
+print '--->',s3 #=> ---> ---> my name is jacklau, my age is 23
+s4="my name is {1}, my age is {0}".format(23,'jacklau')
+print '--->',s4 #=> ---> my name is jacklau, my age is 23
 
 # % 是一一对应的关系,位置从0开始
 format_string="my name is %s, my year is %d." % ('jacklau',37);
@@ -95,7 +99,7 @@ print format_string;
 
 str="this is {1} {0}.".format('my','apple');
 print str; #=> this is apple my.
-# 这种方式要多写很多符合，较上面.format方法麻烦些
+# 这种方式要多写很多符号，较上面.format方法麻烦些
 str2="this is %(whose)s %(fruit)s." % {'whose':'my','fruit':'apple'};
 print str2; #=> this is my apple.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# _*_ encoding:UTF-8 _*_
+# _*_ coding:UTF-8 _*_
 
 # 文件操作
 # 1，读文件

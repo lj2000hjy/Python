@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # _*_ encoding:UTF-8 _*_
-
 import random
+
 num=random.randint(0,10)
  
 print('--------小俊工作室----------')
