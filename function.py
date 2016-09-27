@@ -81,3 +81,46 @@ print x #=> before modified global x= 200
 main()
 print 'after modified global x=',
 print x #=> after modified global x= -1
+
+# map函数根据提供的函数对指定的序列做映射，定义：
+# map(function, sequence[,sequence,...])--->list
+
+
+# lambda:某处就真的只需要一个能做一件事情的函数而已，连它叫什么名字都无关紧要。
+# Lambda 表达式就可以用来做这件事。
+# 编程中提到的 lambda 表达式，通常是在需要一个函数，但是又不想费神去命名一个函数的场合下使用，也就是指匿名函数。
+#举例对比（列表中的元素平方）：
+print map(lambda x:x*x, range(5))
+#=> [0, 1, 4, 9, 16]
+
+def sq(x):
+    return x*x
+print map(sq, range(6))
+#=> [0, 1, 4, 9, 16, 25]
+
+
+
+a=[{'type': 2, 'ID': 1}, {'type': 4, 'ID': 2}, {'ID': 3}]
+print map(lambda x:x['ID'], a)
+#=> [1, 2, 3]
+
+# filter函数对指定的序列进行过滤操作。定义：
+# filter(function or None, sequence) -> list, tuple, or string
+print filter(lambda x:x%2==1, [1, 2, 3])
+#=> [1, 3]
+print filter(lambda x:x%2==1, (1, 2, 3))
+#=> (1, 3)
+
+# reduce函数会对参数序列中元素进行累积。定义：
+# reduce(function, sequence[, initial]) -> value
+# 注：function必须是有2个参数的函数
+print reduce(lambda x, y:x+y, [1,2,3,4])
+#=> 10 如果没有initial参数，这么算：（（（1+2）+3）+4）
+print reduce(lambda x, y:x+y, [1,2,3,4], 10)
+#=> 20 如果有initial参数，这么算： （（（（10+1）+2）+3）+4）
+print reduce(lambda x, y:x+y, [1,2,3,4], 2)
+#=> 12 如果有initial参数，这么算： （（（（2+1）+2）+3）+4）
+
+
+
+

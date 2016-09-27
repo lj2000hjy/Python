@@ -96,12 +96,20 @@ print '--->',s4 #=> ---> my name is jacklau, my age is 23
 format_string="my name is %s, my year is %d." % ('jacklau',37);
 print format_string;
 #=> my name is jacklau, my year is 37.
-
+# 格式化字符串函数str.format()通过位置
 str="this is {1} {0}.".format('my','apple');
 print str; #=> this is apple my.
 # 这种方式要多写很多符号，较上面.format方法麻烦些
 str2="this is %(whose)s %(fruit)s." % {'whose':'my','fruit':'apple'};
 print str2; #=> this is my apple.
+
+str3 = 'this is my %s' % ('apple')
+print str3
+
+# 格式化字符串函数str.format()通过关键字
+# format括号内用=给变量赋值
+str4="{name} is a good {sex}".format(name='jacklau',sex='male')
+print str4 #=> jacklau is a good male
 
 s1='a';
 s2='b';
@@ -137,4 +145,47 @@ print strs.split(','); #=> ['one', 'two', 'three', 'four']
 url='''<a href="http://www.jinxiutuwen.com/blog/detail/2334543.html" class="test">百度一下</a>'''
 print url[url.find('href')+6:url.find('html')+4];
 #=> http://www.jinxiutuwen.com/blog/detail/2334543.html
+
+
+# 格式限定符
+# 通过{} : 符号
+# 填充和对齐
+# ^<>分别表示居中、左对齐、右对齐，后面带宽度
+str="{:^20}".format('hello,jack')
+print str #=>      hello,jack     
+str="{:<20}".format('hello,jack')
+print str #=> hello,jack          
+str="{:>20}".format('hello,jack')
+print str #=>           hello,jack
+
+# 精度和类型f
+# 精度常和f一起使用
+str = '{:.2f}'.format(3.1415)
+print str #=> 3.14
+str = '{:.4f}'.format(3.1)
+print str #=> 3.1000
+
+# 千位分隔符(只针对数字)
+str='{:,}'.format(1000000)
+print str #=> 1,000,000
+
+# 指定占位符宽度（左对齐）
+print "NAME:%-8s AGE:%-8d WEIGHT:%-8.2f" % ("jihite", 17, 62.2)
+#=> NAME:jihite   AGE:17       WEIGHT:62.20 
+# 指定占位符（只能用0当占位符）
+print "NAME:%-8s AGE:%08d WEIGHT:%08.2f" % ("jihite", 17, 62.2)
+#=> NAME:jihite   AGE:00000017 WEIGHT:00062.20
+
+s = "jihite"
+print s.center(10, "*")
+#=> **jihite**
+print s.ljust(10, "*")
+#=> jihite****
+print s.rjust(10, "*")
+#=> ****jihite
+
+print 5 * '*' #=> *****
+
+
+
 

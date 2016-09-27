@@ -60,7 +60,8 @@ print dic3.keys() #=> ['a', 'c', 'b']
 # 5）values函数：获取字典所有的value。
 print dic3.values() #=> ['one', 'three', 'two']
 
-# 6）items函数：获取字典所有的key-value。
+# 6）items函数：获取字典所有的key-value的列表对象。
+print dic3 #=> {'a': 'one', 'c': 'three', 'b': 'two'}
 print dic3.items() #=> [('a', 'one'), ('c', 'three'), ('b', 'two')]
 
 # 7）update函数：更新字典里某键（key）的键值（value），如果更新的key原字典没有，则update就向字典里添加一项数据。
@@ -117,3 +118,18 @@ for (k,v) in dic.items():
 #=> dic[ 3 ]= Rose
 #=> dic[ 4 ]= John
 #=> dic[ 5 ]= Mark
+
+# enumerate枚举类型
+c = {'a':1, 'b':2, 'c':3}
+d=c.items()
+for key,value in enumerate(d):
+    #print "{0}:{1}".format(key, value)
+    #print "{index}:{item}".format(index=key,item=value)
+    
+    #print "%(index)s:%(item)s" % {'index':key,'item':value}
+    print "%s : %s" % (key, value)
+'''
+0 : ('a', 1)
+1 : ('c', 3)
+2 : ('b', 2)
+'''
