@@ -44,23 +44,23 @@ print re[0],re[1],re[2],re[3]
 
 # 2，局部变量：
 def f1():
-    x=12     #局部变量
-    print x #=> 12
+    x=12        #局部变量
+    print x     #=> 12
     
 def f2():
-    y=13      #局部变量
-    print y #=> 13
+    y=13        #局部变量
+    print y     #=> 13
     
 def f3():
-    print x       #错误：没有定义变量x，这与“不需要预先定义数据类型”不矛盾
+    print x     #错误：没有定义变量x，这与“不需要预先定义数据类型”不矛盾
     print y
     
-def main():
+def main1():
     f1()
     f2()
-    #f3()#变量报错  
+    #f3()   #变量报错  
     
-main()
+main1()
 
 # 3，修改全局变量的值：
 def modifyGlobal():
@@ -68,7 +68,7 @@ def modifyGlobal():
     print 'write x =-1'
     x=-1
     
-def main():
+def main2():
 # printLocalx()
 # printLocaly()
 # readGlobal()
@@ -78,7 +78,7 @@ x=200
 #y=100
 print 'before modified global x=',
 print x #=> before modified global x= 200
-main()
+main2()
 print 'after modified global x=',
 print x #=> after modified global x= -1
 

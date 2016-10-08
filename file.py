@@ -94,7 +94,3 @@ fn='test.txt'
 fp=open(fn,'w+') 
 fp.write('www.python.com') 
 fp.close()
-
-
-
-

@@ -1,9 +1,8 @@
 #!/usr/bin/python
-# _*_ encoding:UTF-8 _*_
+# _*_ coding:UTF-8 _*_
 
 # 1，while语句：与C在表达上有区别，c有while与do……while形式；Python下：while与while……else……形式
 # 1）while形式下：
-
 i=1
 while i < 5:
     print 'Welcome you!'
@@ -49,4 +48,3 @@ i=0
 for val in li:
     print 'li[%d]' % i,val
     i+=1
-
