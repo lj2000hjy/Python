@@ -217,13 +217,11 @@ func main() {
 	<tr><td>3</td><td>Smith</td><td>20</td></tr>
   </tbody>
 </table>
--
+---
 
 <a id="user-content-13"></a>13、转义\原样输出 [返回目录](#user-content-home)
 ===
 * 格式：\\[字符]
-
--
+---
 \*\*显示粗体的内容**
--
-
+---
